@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap');
+
+:root {
+    /* Colors */
+
+    /*-- Primary --*/
+    
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    
+    /*-- Neutral --*/
+    
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+button {
+    border-style: none;
+}
+
+/* Utility classes */
+.bg-dark { background-color: var(--Dark-Blue); }
+.card--dark { background-color: var(--Dark-Grayish-Blue); }
+
+/* Container */
+.container {
+    padding: 1rem;
+}
+
+/* Cards */
+.card {
+    position: relative;
+    padding: 2rem;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    margin-inline: auto;
+}
+
+.card__title {
+    color: var(--Neon-Green);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+.card__quote {
+    color: var(--Light-Cyan);
+    font-weight: 800;
+    font-size: 28px;
+}
+
+.card > * {
+    padding-block: 1rem;
+}
+
+.card__btn {
+    position: absolute;
+    padding: 1rem;
+    background-color: var(--Neon-Green); 
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.dice {
+    transition: all 0.7s ease-in-out;
+}
+
+.card__btn:hover .dice {
+    transform: rotate(360deg);
+}
+.card__btn:hover {
+    transform: translate(-50%) scale(1.2);
+}
+
+.card__btn:active {
+    transform: translate(-50%, 10px);
+}
+
+.attribution {
+    color: white;
+}
